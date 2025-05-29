@@ -6,13 +6,14 @@ const suggestions = [
     'Do we have any sea bass today?',
     'Show me alternative types of fish and their stock codes',
     'What’s the code for grilled chicken?',
-    'List all vegetarian dishes with their codes'
+    'List all vegetarian dishes with their codes',
 ];
 
 export default function Home() {
     const [input, setInput] = useState('');
     const [messages, setMessages] = useState<{ sender: 'user' | 'bot'; text: string }[]>([]);
     const [isTyping, setIsTyping] = useState(false);
+    const [showSuggestions, setShowSuggestions] = useState(true); // 👈 NEW
 
     const handleSend = async () => {
         if (!input.trim()) return;
@@ -21,6 +22,7 @@ export default function Home() {
         setMessages((prev) => [...prev, { sender: 'user', text: userMessage }]);
         setInput('');
         setIsTyping(true);
+        setShowSuggestions(false); // 👈 Hide suggestions after sending
 
         try {
             const res = await fetch("/api/chat", {
@@ -45,23 +47,29 @@ export default function Home() {
                 <p className="text-lg text-gray-400 mt-2">How can I help you today?</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl w-full mb-10">
-                {suggestions.map((s, i) => (
-                    <button
-                        key={i}
-                        className="p-4 bg-zinc-900 rounded-xl border border-zinc-700 text-left hover:bg-zinc-800 transition"
-                        onClick={() => setInput(s)}
-                    >
-            <span className="font-medium text-white">
-              {s.split(' ').slice(0, 4).join(' ')}
-            </span>
-                        <br />
-                        <span className="text-sm text-gray-400">
-              {s.split(' ').slice(4).join(' ')}
-            </span>
-                    </button>
-                ))}
-            </div>
+            {/* Suggestions */}
+            {showSuggestions && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl w-full mb-10">
+                    {suggestions.map((s, i) => (
+                        <button
+                            key={i}
+                            className="p-4 bg-zinc-900 rounded-xl border border-zinc-700 text-left hover:bg-zinc-800 transition"
+                            onClick={() => {
+                                setInput(s);
+                                setShowSuggestions(false); // 👈 Hide on click too
+                            }}
+                        >
+              <span className="font-medium text-white">
+                {s.split(' ').slice(0, 4).join(' ')}
+              </span>
+                            <br />
+                            <span className="text-sm text-gray-400">
+                {s.split(' ').slice(4).join(' ')}
+              </span>
+                        </button>
+                    ))}
+                </div>
+            )}
 
             {/* Chat window */}
             <div className="w-full max-w-2xl flex flex-col gap-2 mb-6">
