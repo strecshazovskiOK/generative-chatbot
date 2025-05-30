@@ -1,6 +1,8 @@
 # 🛎️ AI-Powered Hotel Inventory Chatbot
 
 This project is a dynamic AI-supported chatbot built with [Next.js](https://nextjs.org), MongoDB, and Gemini 2.0 Flash. It allows hotel staff to query stock items using natural language — such as types of fish, vegetarian dishes, or item codes — and get smart responses based on current inventory data.
+---
+<img width="865" alt="Screenshot 2025-05-30 at 02 14 12" src="https://github.com/user-attachments/assets/9019c846-e224-4979-864f-87030f250aed" />
 
 ---
 
@@ -11,7 +13,7 @@ This project is a dynamic AI-supported chatbot built with [Next.js](https://next
 - 📦 MongoDB for inventory storage
 - 🔍 Intelligent search + relevant alternatives (RAG-like logic)
 - 🎨 Styled with Tailwind CSS
-- 🚀 Deployed on [Vercel]())
+- 🚀 Deployed on [Vercel](https://generative-chatbot-2d974ltc1-strecshazovskioks-projects.vercel.app))
 
 ---
 
