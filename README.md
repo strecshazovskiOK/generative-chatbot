@@ -13,7 +13,8 @@ This project is a dynamic AI-supported chatbot built with [Next.js](https://next
 - 📦 MongoDB Atlas (cloud-hosted) is used to store and retrieve hotel inventory data, including stock items, codes, and metadata.
 - 🔍 Intelligent search + relevant alternatives (RAG-like logic)
 - 🎨 Styled with Tailwind CSS
-- 🚀 Deployed on [Vercel](https://generative-chatbot-delta.vercel.app)
+- 🚀 Deployed on Vercel [App]([https://generative-chatbot-delta.vercel.app](https://generative-chatbot-umber.vercel.app/))
+!Please note that since I am using free version of the Gemini 2.0 Flash API, on Vercel it is returning "no response" which is not an error.!
 
 ---
 
