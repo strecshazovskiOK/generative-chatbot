@@ -11,7 +11,7 @@ This project is a dynamic AI-supported chatbot built with [Next.js](https://next
 - 📦 MongoDB for inventory storage
 - 🔍 Intelligent search + relevant alternatives (RAG-like logic)
 - 🎨 Styled with Tailwind CSS
-- 🚀 Deployed on [Vercel]([https://vercel.com](https://generative-chatbot-strecshazovskiok-strecshazovskioks-projects.vercel.app))
+- 🚀 Deployed on [Vercel]())
 
 ---
 
