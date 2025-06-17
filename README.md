@@ -13,8 +13,6 @@ This project is a dynamic AI-supported chatbot built with [Next.js](https://next
 - 🔍 Intelligent search + relevant alternatives (RAG-like logic)
 - 🎨 Styled with Tailwind CSS
 - 🚀 Deployed on Vercel [App]([https://generative-chatbot-delta.vercel.app](https://generative-chatbot-umber.vercel.app/))
-  
-!Please note that since I am using free version of the Gemini 2.0 Flash API, on Vercel it is returning "no response" which is not an error.!
 
 ---
 
